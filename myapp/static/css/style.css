@@ -1,0 +1,243 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0 0 20px;
+    color: #333;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+    margin: 0 0 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.card p {
+    font-size: 1em;
+    color: #666;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+        padding: 15px;
+    }
+    
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    p {
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 1.2em;
+    }
+
+    .card p {
+        font-size: 0.9em;
+    }
+}
+.banner {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+}
+/* General styles for the form container */
+.form-with-validation {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling form elements */
+.form-with-validation input,
+.form-with-validation select,
+.form-with-validation textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form-with-validation input:focus,
+.form-with-validation select:focus,
+.form-with-validation textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Styling for form labels */
+.form-with-validation label {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Submit button styling */
+.form-with-validation button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-with-validation button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.form-with-validation button:active {
+    background-color: #388e3c;
+    transform: translateY(0);
+}
+
+/* Error message styling */
+.form-with-validation .error {
+    color: #e53935;
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.errorlist {
+    color: #F00;
+    margin-left: 2rem;
+}
+
+.errorlist li::marker {
+    content: '🚨 ';
+}
+
+.logout {
+    display: inline-block;
+}
+
+.logout-button {
+    font-size: 2.5rem;
+    background-color: rgb(0, 0, 0, 0);
+    border: none;
+}
+
+.logout-button:hover {
+    opacity: .85;
+}

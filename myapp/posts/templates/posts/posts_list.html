@@ -1,0 +1,21 @@
+{% extends 'layout.html'%}
+{% block title%}
+    Posts_list
+{% endblock %}
+{% block content%}
+    <section>
+        <h1>Posts list</h1>
+        {% for post in posts%}    {% comment %} AS we know that from view the posts data is also send in render method {% endcomment %}
+            <article>
+                <h2>
+                    <a href="{% url 'posts:page' slug=post.slug %}">
+                    {{post.title}}
+                    </a>
+                </h2>
+                <p>{{post.body}}</p>
+                <p>Created by {{post.author}} in {{post.date}}</p>
+            </article>
+        {% endfor %}
+    </section>
+   
+{% endblock%}
